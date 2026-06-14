@@ -24,10 +24,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install npm dependencies
         run: |
           cd e2e
           npm ci
+
+      - name: Install Playwright browsers
+        run: |
+          cd e2e
           npx playwright install --with-deps chromium
 
       - name: Run Playwright tests
@@ -44,14 +48,14 @@ jobs:
           retention-days: 30
 
       - name: Upload to GitHub Pages
-        if: always()
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: e2e/playwright-report/
 
   deploy-report:
     needs: test
-    if: always()
+    if: needs.test.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
