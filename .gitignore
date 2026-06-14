@@ -1,0 +1,30 @@
+# Node / Playwright
+node_modules/
+e2e/node_modules/
+e2e/test-results/
+e2e/playwright-report/
+e2e/.playwright/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+api/.venv/
+dist/
+*.egg-info/
+
+# k6
+performance/results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
