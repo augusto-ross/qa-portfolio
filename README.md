@@ -1,9 +1,9 @@
 # qa-portfolio
 
-[![E2E Tests](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/e2e.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/e2e.yml)
-[![API Tests](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/api.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/api.yml)
-[![Performance](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/performance.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/performance.yml)
-[![Coverage](docs/badges/coverage.svg)](https://github.com/<YOUR_USERNAME>/qa-portfolio/actions/workflows/api.yml)
+[![E2E Tests](https://github.com/augusto-ross/qa-portfolio/actions/workflows/e2e.yml/badge.svg)](https://github.com/augusto-ross/qa-portfolio/actions/workflows/e2e.yml)
+[![API Tests](https://github.com/augusto-ross/qa-portfolio/actions/workflows/api.yml/badge.svg)](https://github.com/augusto-ross/qa-portfolio/actions/workflows/api.yml)
+[![Performance](https://github.com/augusto-ross/qa-portfolio/actions/workflows/performance.yml/badge.svg)](https://github.com/augusto-ross/qa-portfolio/actions/workflows/performance.yml)
+[![Coverage](docs/badges/coverage.svg)](https://github.com/augusto-ross/qa-portfolio/actions/workflows/api.yml)
 
 > A public SDET portfolio demonstrating end-to-end automation, API testing, performance testing, and CI/CD pipeline ownership.
 
