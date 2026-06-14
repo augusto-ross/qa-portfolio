@@ -1,0 +1,41 @@
+name: API Tests
+
+on:
+  push:
+    branches: [main]
+    paths: ['api/**', '.github/workflows/api.yml']
+  pull_request:
+    branches: [main]
+    paths: ['api/**', '.github/workflows/api.yml']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd api
+          pip install -e ".[dev]"
+
+      - name: Run tests with coverage
+        run: |
+          cd api
+          pytest --cov=schemas --cov-report=xml --cov-report=term
+
+      - name: Generate coverage badge
+        run: |
+          cd api
+          genbadge coverage -i coverage.xml -o ../docs/badges/coverage.svg
+
+      - name: Commit coverage badge
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: update coverage badge [skip ci]"
+          file_pattern: "docs/badges/coverage.svg"
